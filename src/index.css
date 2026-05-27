@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-ink text-white overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection { background: rgba(26,86,219,0.35); }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-ink; }
+  ::-webkit-scrollbar-thumb { @apply bg-blue/40 rounded-full; }
+}
+
+@layer utilities {
+  /* Gradient text */
+  .text-blue-grad {
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(90deg, #2563eb, #7ab4ff);
+  }
+  /* Animated shimmer gradient text */
+  .text-blue-shimmer {
+    @apply text-transparent bg-clip-text bg-[size:200%];
+    background-image: linear-gradient(90deg, #2563eb 0%, #4f8ef7 35%, #7ab4ff 55%, #2563eb 100%);
+    animation: shimmer 2.8s linear infinite;
+  }
+
+  /* Grid texture — vivid enough to show on deep navy */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(79,142,247,0.13) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79,142,247,0.13) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+  .bg-grid-sm {
+    background-image:
+      linear-gradient(rgba(79,142,247,0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79,142,247,0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Gradient border wrapper (1px) — more vivid */
+  .border-grad {
+    background: linear-gradient(160deg, rgba(37,99,235,0.55) 0%, rgba(37,99,235,0.15) 55%, rgba(37,99,235,0.04) 100%);
+    padding: 1px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+  .border-grad:hover {
+    background: linear-gradient(160deg, rgba(79,142,247,0.75) 0%, rgba(37,99,235,0.35) 50%, rgba(37,99,235,0.08) 100%);
+  }
+
+  /* Top accent stripe */
+  .top-stripe::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #2563eb 25%, #7ab4ff 50%, #2563eb 75%, transparent 100%);
+    z-index: 100;
+  }
+}
+
+/* Section scroll offset */
+section[id] { scroll-margin-top: 68px; }
