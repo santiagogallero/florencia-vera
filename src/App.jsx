@@ -9,6 +9,9 @@ import WhatsAppFloat from './components/WhatsAppFloat'
 export default function App() {
   return (
     <>
+      {/* Global grid — one canvas fixed behind everything, no section seams */}
+      <div className="bg-grid-global fixed inset-0 z-0 pointer-events-none" />
+
       {/* Top accent stripe */}
       <div
         className="fixed top-0 left-0 right-0 h-[2px] z-[100] pointer-events-none"

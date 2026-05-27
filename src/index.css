@@ -28,19 +28,17 @@
     animation: shimmer 2.8s linear infinite;
   }
 
-  /* Grid texture — vivid enough to show on deep navy */
-  .bg-grid {
+  /* Global grid canvas — single layer, no per-section seams */
+  .bg-grid-global {
     background-image:
-      linear-gradient(rgba(79,142,247,0.13) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(79,142,247,0.13) 1px, transparent 1px);
-    background-size: 64px 64px;
+      linear-gradient(rgba(79,142,247,0.11) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79,142,247,0.11) 1px, transparent 1px);
+    background-size: 56px 56px;
+    background-attachment: fixed;
   }
-  .bg-grid-sm {
-    background-image:
-      linear-gradient(rgba(79,142,247,0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(79,142,247,0.1) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
+  /* Keep aliases in case any section still references them */
+  .bg-grid    { background: none; }
+  .bg-grid-sm { background: none; }
 
   /* Gradient border wrapper (1px) — more vivid */
   .border-grad {
