@@ -1,10 +1,8 @@
 import { useInView } from '../hooks/useInView'
 
 const CERTS = [
-  { abbr: 'ECYT',   full: 'Entre el Cielo y la Tierra' },
-  { abbr: 'AHA',    full: 'Asociación Hispanoamericana de Acróbatas' },
-  { abbr: 'CENPRO', full: 'Centro de Formación Profesional' },
-  { abbr: 'FAAA',   full: 'Federación Argentina de Acrobacia Aérea' },
+  { abbr: 'ECYT', full: 'Entre el Cielo y la Tierra' },
+  { abbr: 'AHA',  full: 'Asociación Hispanoamericana de Acróbatas' },
 ]
 
 export default function Credentials() {
@@ -52,7 +50,7 @@ export default function Credentials() {
         </div>
 
         {/* Certification badges */}
-        <div ref={certsRef} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div ref={certsRef} className="grid sm:grid-cols-2 gap-4 max-w-md">
           {CERTS.map(({ abbr, full }, i) => (
             <div
               key={abbr}
