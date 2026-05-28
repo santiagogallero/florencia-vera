@@ -52,10 +52,14 @@ export default function CtaBanner() {
           <span className="text-blue-shimmer">PASÓ SIN MOVERTE.</span>
         </h2>
 
-        <div className="font-barlow font-light text-white/70 text-[1.05rem] leading-relaxed mb-10 max-w-xl mx-auto space-y-1">
-          <p>Te acompaño en todo el proceso.</p>
-          <p>Seguimiento y coaching ilimitado.</p>
-          <p className="text-white/50 text-[0.92rem] mt-3">
+        <div className="mb-10 max-w-xl mx-auto space-y-1">
+          <p className="font-condensed font-semibold text-[1.1rem] tracking-[0.1em] uppercase text-white">
+            Te acompaño en todo el proceso.
+          </p>
+          <p className="font-condensed font-semibold text-[1.1rem] tracking-[0.1em] uppercase text-white">
+            Seguimiento y coaching ilimitado.
+          </p>
+          <p className="font-barlow font-light text-white/55 text-[0.88rem] pt-2">
             Modalidad presencial Parque de Golf Villa Adelina / ONLINE vía ZOOM
           </p>
         </div>
@@ -70,7 +74,7 @@ export default function CtaBanner() {
           onMouseLeave={e => e.currentTarget.style.boxShadow = '0 4px 32px rgba(0,0,0,0.4)'}
         >
           <WaIcon size={22} className="text-[#25D366]" />
-          Escribime por WhatsApp
+          Reservá
         </a>
       </div>
     </div>

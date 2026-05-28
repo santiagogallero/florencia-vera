@@ -4,6 +4,7 @@ import Services      from './components/Services'
 import Credentials   from './components/Credentials'
 import CtaBanner     from './components/CtaBanner'
 import Benefits      from './components/Benefits'
+import Philosophy    from './components/Philosophy'
 import ContactForm   from './components/ContactForm'
 import Footer        from './components/Footer'
 import WhatsAppFloat from './components/WhatsAppFloat'
@@ -28,6 +29,7 @@ export default function App() {
         <Credentials />
         <CtaBanner />
         <Benefits />
+        <Philosophy />
         <ContactForm />
       </main>
 

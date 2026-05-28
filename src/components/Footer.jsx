@@ -44,11 +44,6 @@ export default function Footer() {
 
           {/* Brand col */}
           <div>
-            <div className="font-bebas text-[2rem] tracking-[0.08em] mb-3">
-              Florencia
-              <span className="text-blue-grad bg-gradient-to-r from-blue to-blue-lt bg-clip-text text-transparent">.</span>
-              Vera
-            </div>
             <p className="font-barlow font-light text-[0.88rem] text-white/40 leading-relaxed max-w-[280px] mb-6">
               Instructora Certificada de Gimnasia Acrobática y Deportiva.
             </p>

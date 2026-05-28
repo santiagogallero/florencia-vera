@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 const WA_BASE = 'https://wa.me/5491132907998?text='
 
-const INPUT_BASE = 'w-full bg-card border rounded-md px-4 py-3 font-barlow text-[0.9rem] text-white placeholder-white/20 outline-none transition-all duration-200'
+const INPUT_BASE = 'w-full bg-card border rounded-md px-4 py-3 font-barlow text-[0.9rem] text-white placeholder-white/40 outline-none transition-all duration-200'
 const INPUT_NORMAL = 'border-white/[0.08] focus:border-blue/60 focus:bg-card-2'
 const INPUT_ERROR  = 'border-red-500/60 focus:border-red-400'
 
@@ -74,22 +74,12 @@ export default function ContactForm() {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center gap-3 mb-4">
-            <span className="block w-6 h-[2px] bg-blue" />
-            <span className="font-condensed font-semibold text-[0.7rem] tracking-[0.22em] uppercase text-blue-lt">
-              Primer contacto
-            </span>
-            <span className="block w-6 h-[2px] bg-blue" />
-          </div>
-          <h2 className="font-bebas leading-[0.9] mb-4" style={{ fontSize: 'clamp(40px,6vw,72px)' }}>
-            EMPEZÁ HOY —{' '}
+          <h2 className="font-bebas leading-[0.9]" style={{ fontSize: 'clamp(44px,6.5vw,80px)' }}>
+            EMPEZÁ{' '}
             <span className="text-blue-grad bg-gradient-to-r from-blue to-blue-lt bg-clip-text text-transparent">
-              PRIMER CONTACTO
+              HOY
             </span>
           </h2>
-          <p className="font-barlow font-light text-[0.95rem] text-white/55">
-            Completá el formulario y te respondo por WhatsApp
-          </p>
         </div>
 
         {/* Form card */}
@@ -101,7 +91,7 @@ export default function ContactForm() {
               <div className="grid sm:grid-cols-2 gap-5 mb-5">
                 {FIELDS.map(({ name, label, type, required }) => (
                   <div key={name}>
-                    <label className="block font-condensed font-semibold text-[0.7rem] tracking-[0.16em] uppercase text-white/40 mb-2">
+                    <label className="block font-condensed font-semibold text-[0.7rem] tracking-[0.16em] uppercase text-white/65 mb-2">
                       {label}{required && <span className="text-blue ml-1">*</span>}
                     </label>
                     <input
@@ -121,7 +111,7 @@ export default function ContactForm() {
 
               {/* Lesiones textarea */}
               <div className="mb-5">
-                <label className="block font-condensed font-semibold text-[0.7rem] tracking-[0.16em] uppercase text-white/40 mb-2">
+                <label className="block font-condensed font-semibold text-[0.7rem] tracking-[0.16em] uppercase text-white/65 mb-2">
                   ¿Tenés alguna lesión?
                 </label>
                 <textarea
@@ -136,7 +126,7 @@ export default function ContactForm() {
 
               {/* Cómo te conocí — select */}
               <div className="mb-8">
-                <label className="block font-condensed font-semibold text-[0.7rem] tracking-[0.16em] uppercase text-white/40 mb-2">
+                <label className="block font-condensed font-semibold text-[0.7rem] tracking-[0.16em] uppercase text-white/65 mb-2">
                   ¿Cómo fue tu primer contacto conmigo?
                 </label>
                 <select

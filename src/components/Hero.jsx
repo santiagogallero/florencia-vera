@@ -50,15 +50,15 @@ export default function Hero() {
           {/* Main title */}
           <h1
             className="font-bebas leading-[0.9] mb-5 animate-fade-up"
-            style={{ fontSize: 'clamp(30px,4.8vw,62px)', animationDelay: '0.22s' }}
+            style={{ fontSize: 'clamp(38px,6vw,78px)', animationDelay: '0.22s' }}
           >
             PROGRAMA DE RECUPERACIÓN<br />MUSCULAR DEPORTIVA
           </h1>
 
           {/* EMPEZÁ HOY badge */}
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full border border-blue/30 bg-blue/[0.08] animate-fade-up" style={{ animationDelay: '0.28s' }}>
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-xl" style={{ animation: 'blink 1.8s ease-in-out infinite' }} />
-            <span className="font-condensed font-bold text-[0.65rem] tracking-[0.22em] uppercase text-blue-lt">Empezá Hoy</span>
+          <div className="inline-flex items-center gap-2 mb-4 px-5 py-2 rounded-full bg-blue animate-fade-up" style={{ animationDelay: '0.28s', boxShadow: '0 4px 20px rgba(37,99,235,0.55)' }}>
+            <span className="w-1.5 h-1.5 rounded-full bg-white/70" style={{ animation: 'blink 1.8s ease-in-out infinite' }} />
+            <span className="font-condensed font-bold text-[0.7rem] tracking-[0.22em] uppercase text-white">Empezá Hoy</span>
           </div>
 
           {/* Subtitle */}
@@ -91,19 +91,6 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Stats */}
-          <div className="flex flex-wrap gap-10 pt-7 border-t border-white/[0.08] animate-fade-up" style={{ animationDelay: '0.46s' }}>
-            {[
-              { value: '+5K',  label: 'Alumnos entrenados' },
-              { value: '8',    label: 'Años de experiencia' },
-              { value: '100%', label: 'Personalizado' },
-            ].map(({ value, label }) => (
-              <div key={label}>
-                <div className="font-bebas text-[2.6rem] leading-none text-blue-shimmer">{value}</div>
-                <div className="font-condensed text-[0.62rem] tracking-[0.16em] uppercase text-white/40 mt-1">{label}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* RIGHT: Florencia photo */}

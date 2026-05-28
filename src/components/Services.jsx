@@ -31,8 +31,7 @@ const SERVICES = [
     num: '02',
     icon: ICONS.strength,
     title: 'FUERZA Y RESISTENCIA',
-    desc: 'Escultí tu cuerpo atlético, mejorá tu velocidad de respuesta y rendí al máximo.',
-    note: 'Modalidad: presencial Parque de Golf Villa Adelina / ONLINE vía ZOOM',
+    desc: 'Esculpí tu cuerpo atlético, mejorá tu velocidad de respuesta y rendí al máximo.',
   },
 ]
 
@@ -58,10 +57,6 @@ function ServiceCard({ service, delay }) {
             {service.num}
           </span>
 
-          <span className="inline-block font-condensed font-semibold text-[0.65rem] tracking-[0.2em] uppercase text-blue mb-4 bg-blue/10 px-2.5 py-1 rounded-full border border-blue/20 self-start">
-            {service.num}
-          </span>
-
           <div className="text-blue-lt mb-4">{service.icon}</div>
 
           <h3 className="font-bebas text-[1.75rem] leading-[1.05] text-white mb-3 group-hover:text-blue-lt transition-colors duration-300">
@@ -71,12 +66,6 @@ function ServiceCard({ service, delay }) {
           <p className="font-barlow font-light text-[0.87rem] text-white/65 leading-[1.75] flex-1">
             {service.desc}
           </p>
-
-          {service.note && (
-            <p className="font-condensed text-[0.7rem] tracking-[0.08em] text-blue/55 mt-3 pt-3 border-t border-blue/10">
-              {service.note}
-            </p>
-          )}
 
           <a
             href={WA_LINK}
@@ -129,6 +118,11 @@ export default function Services() {
             <ServiceCard key={s.num} service={s} delay={i * 100} />
           ))}
         </div>
+
+        {/* Modalidad */}
+        <p className="mt-6 font-condensed text-[0.72rem] tracking-[0.16em] uppercase text-white/30">
+          Presencial — Parque de Golf Villa Adelina &nbsp;/&nbsp; Online vía ZOOM
+        </p>
 
       </div>
     </section>

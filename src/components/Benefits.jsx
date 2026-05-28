@@ -98,28 +98,21 @@ export default function Benefits() {
         {/* Header */}
         <div
           ref={headerRef}
-          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14 transition-all duration-700"
+          className="mb-14 transition-all duration-700"
           style={{ opacity: headerIn ? 1 : 0, transform: headerIn ? 'none' : 'translateY(24px)' }}
         >
-          <div>
-            <div className="inline-flex items-center gap-3 mb-3">
-              <span className="block w-6 h-[2px] bg-blue" />
-              <span className="font-condensed font-semibold text-[0.7rem] tracking-[0.22em] uppercase text-blue-lt">
-                Por qué entrenar conmigo
-              </span>
-            </div>
-            <h2 className="font-bebas leading-[0.92]" style={{ fontSize: 'clamp(44px,6vw,72px)' }}>
-              MI{' '}
-              <span className="text-blue-grad bg-gradient-to-r from-blue to-blue-lt bg-clip-text text-transparent">
-                ENFOQUE
-              </span>
-            </h2>
-          </div>
-          <p className="font-barlow font-light text-[0.95rem] text-white/65 max-w-sm leading-relaxed md:text-right">
-            Para los que nunca fueron al gym, para los que lo
-            dejaron, para los que quieren empezar de cero.
-            Acá todo es posible.
-          </p>
+          <a href="#beneficios" className="inline-flex items-center gap-3 mb-3 group">
+            <span className="block w-6 h-[2px] bg-blue" />
+            <span className="font-condensed font-semibold text-[0.7rem] tracking-[0.22em] uppercase text-blue-lt group-hover:text-blue-xl transition-colors duration-200">
+              Por qué entrenar conmigo →
+            </span>
+          </a>
+          <h2 className="font-bebas leading-[0.92]" style={{ fontSize: 'clamp(44px,6vw,72px)' }}>
+            MI{' '}
+            <span className="text-blue-grad bg-gradient-to-r from-blue to-blue-lt bg-clip-text text-transparent">
+              ENFOQUE
+            </span>
+          </h2>
         </div>
 
         {/* Grid — 4 beneficios */}
