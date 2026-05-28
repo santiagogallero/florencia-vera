@@ -21,11 +21,25 @@ export default function Hero() {
       {/* Watermark */}
       <span aria-hidden="true" className="absolute bottom-0 right-0 font-bebas leading-none select-none pointer-events-none" style={{ fontSize: 'clamp(130px,21vw,300px)', color: 'rgba(37,99,235,0.07)', transform: 'translate(0.04em, 0.05em)' }}>FV</span>
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 pt-28 pb-16 grid lg:grid-cols-[1fr_420px] gap-16 items-center">
+      {/* Florencia — imagen sin fondo, esquina inferior derecha */}
+      <img
+        src="/florencia.png"
+        alt="Florencia Vera"
+        className="hidden lg:block absolute bottom-0 right-0 pointer-events-none select-none animate-fade-up"
+        style={{
+          height: '88%',
+          width: 'auto',
+          objectFit: 'contain',
+          objectPosition: 'bottom right',
+          animationDelay: '0.3s',
+          filter: 'drop-shadow(-20px 0 60px rgba(37,99,235,0.25))',
+        }}
+      />
 
-        {/* LEFT */}
-        <div>
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 pt-28 pb-16">
+        <div className="max-w-xl">
+
           {/* Eyebrow */}
           <div className="flex items-start gap-3 mb-5 animate-fade-up" style={{ animationDelay: '0.06s' }}>
             <span className="block w-8 h-[2px] bg-blue flex-shrink-0 mt-[0.45em]" />
@@ -63,14 +77,14 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p
-            className="font-barlow font-light text-white/70 leading-relaxed max-w-[460px] mb-8 animate-fade-up"
+            className="font-barlow font-light text-white/70 leading-relaxed mb-8 animate-fade-up"
             style={{ fontSize: 'clamp(0.95rem,1.6vw,1.05rem)', animationDelay: '0.32s' }}
           >
             Descargá tensión, recuperá movilidad y aliviá tus hombros para rendir mejor en cada partido.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-3.5 mb-14 animate-fade-up" style={{ animationDelay: '0.36s' }}>
+          <div className="flex flex-wrap gap-3.5 animate-fade-up" style={{ animationDelay: '0.36s' }}>
             <a
               href={WA_LINK}
               target="_blank"
@@ -92,21 +106,6 @@ export default function Hero() {
           </div>
 
         </div>
-
-        {/* RIGHT: Florencia photo */}
-        <div className="hidden lg:flex items-center justify-center animate-fade-up" style={{ animationDelay: '0.28s' }}>
-          <div className="relative w-full max-w-[380px]">
-            <div className="absolute -inset-6 rounded-3xl pointer-events-none" style={{ background: 'radial-gradient(ellipse at center, rgba(37,99,235,0.2) 0%, transparent 70%)' }} />
-            <img
-              src="/florencia.jpeg"
-              alt="Florencia Vera — Instructora Certificada de Fitness"
-              className="relative z-10 w-full rounded-2xl object-cover shadow-[0_24px_80px_rgba(0,0,0,0.7)]"
-              style={{ aspectRatio: '3/4' }}
-            />
-            <div className="absolute inset-0 z-20 rounded-2xl border border-blue/20 pointer-events-none" />
-          </div>
-        </div>
-
       </div>
     </section>
   )
