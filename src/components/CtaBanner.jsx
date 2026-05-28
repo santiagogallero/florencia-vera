@@ -43,19 +43,8 @@ export default function CtaBanner() {
         className="relative z-10 max-w-3xl mx-auto transition-all duration-700"
         style={{ opacity: inView ? 1 : 0, transform: inView ? 'none' : 'translateY(28px)' }}
       >
-        {/* Pre-label */}
-        <div
-          className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border backdrop-blur-sm"
-          style={{ background: 'rgba(255,255,255,0.08)', borderColor: 'rgba(255,255,255,0.15)' }}
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-xl" style={{ animation: 'blink 1.8s ease-in-out infinite' }} />
-          <span className="font-condensed font-semibold text-[0.65rem] tracking-[0.22em] uppercase text-white/75">
-            Empezá cuando vos decidás
-          </span>
-        </div>
-
         <h2
-          className="font-bebas leading-[0.9] mb-5 text-white"
+          className="font-bebas leading-[0.9] mb-7 text-white"
           style={{ fontSize: 'clamp(50px,8vw,100px)' }}
         >
           NO IMPORTA<br />
@@ -63,10 +52,13 @@ export default function CtaBanner() {
           <span className="text-blue-shimmer">PASÓ SIN MOVERTE.</span>
         </h2>
 
-        <p className="font-barlow font-light text-white/70 text-[1.05rem] leading-relaxed mb-10 max-w-xl mx-auto">
-          El mejor momento para empezar fue ayer. El segundo mejor momento
-          es ahora. Un mensaje te separa de tu primera clase.
-        </p>
+        <div className="font-barlow font-light text-white/70 text-[1.05rem] leading-relaxed mb-10 max-w-xl mx-auto space-y-1">
+          <p>Te acompaño en todo el proceso.</p>
+          <p>Seguimiento y coaching ilimitado.</p>
+          <p className="text-white/50 text-[0.92rem] mt-3">
+            Modalidad presencial Parque de Golf Villa Adelina / ONLINE vía ZOOM
+          </p>
+        </div>
 
         <a
           href={WA_LINK}

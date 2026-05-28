@@ -50,16 +50,15 @@ export default function Footer() {
               Vera
             </div>
             <p className="font-barlow font-light text-[0.88rem] text-white/40 leading-relaxed max-w-[280px] mb-6">
-              Instructora certificada de fitness con más de 8 años de experiencia.
-              Tu transformación empieza con una decisión.
+              Instructora Certificada de Gimnasia Acrobática y Deportiva.
             </p>
 
             {/* Socials */}
             <div className="flex gap-2.5">
               {[
-                { label: 'Instagram', Icon: IgIcon,       href: '#' },
-                { label: 'TikTok',    Icon: TikTokIcon,   href: '#' },
-                { label: 'WhatsApp',  Icon: WaSmallIcon,  href: WA_LINK, external: true },
+                { label: 'Instagram', Icon: IgIcon,      href: 'https://www.instagram.com/florenciavera_ok?igsh=ajIzNW51amF3bXBh', external: true },
+                { label: 'TikTok',   Icon: TikTokIcon,  href: 'https://www.tiktok.com/@floraerea?_r=1&_t=ZS-96kKzjigcpJ',              external: true },
+                { label: 'WhatsApp', Icon: WaSmallIcon, href: WA_LINK,                                                                  external: true },
               ].map(({ label, Icon, href, external }) => (
                 <a
                   key={label}
@@ -100,12 +99,11 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-3">
               {[
-                { icon: '📱', text: '+54 9 11 3290-7998' },
-                { icon: '💬', text: 'WhatsApp disponible' },
-                { icon: '📍', text: 'Buenos Aires, Argentina' },
-              ].map(({ icon, text }) => (
-                <div key={text} className="flex items-center gap-2.5 font-barlow text-[0.87rem] text-white/45">
-                  <span className="text-[0.85rem] opacity-70">{icon}</span>
+                '+54 9 11 3290-7998',
+                'veraflorencia285@gmail.com',
+                'Buenos Aires, Argentina',
+              ].map(text => (
+                <div key={text} className="font-barlow text-[0.87rem] text-white/45">
                   {text}
                 </div>
               ))}
