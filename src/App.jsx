@@ -25,12 +25,12 @@ export default function App() {
 
       <main>
         <Hero />
-        <Services />
-        <Credentials />
-        <CtaBanner />
         <Benefits />
+        <Services />
+        <CtaBanner />
         <Philosophy />
         <ContactForm />
+        <Credentials />
       </main>
 
       <Footer />

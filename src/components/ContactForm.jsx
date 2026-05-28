@@ -2,17 +2,17 @@ import { useState } from 'react'
 
 const WA_BASE = 'https://wa.me/5491132907998?text='
 
-const INPUT_BASE = 'w-full bg-card border rounded-md px-4 py-3 font-barlow text-[0.9rem] text-white placeholder-white/40 outline-none transition-all duration-200'
-const INPUT_NORMAL = 'border-white/[0.08] focus:border-blue/60 focus:bg-card-2'
-const INPUT_ERROR  = 'border-red-500/60 focus:border-red-400'
+const INPUT_BASE   = 'w-full bg-gray-50 border rounded-md px-4 py-3 font-barlow text-[0.9rem] text-gray-900 placeholder-gray-400 outline-none transition-all duration-200'
+const INPUT_NORMAL = 'border-gray-200 focus:border-blue/70 focus:bg-white'
+const INPUT_ERROR  = 'border-red-400 focus:border-red-500'
 
 const FIELDS = [
-  { name: 'nombre',  label: 'Nombre completo',            type: 'text',   required: true },
-  { name: 'celular', label: 'Celular',                    type: 'tel',    required: true },
-  { name: 'email',   label: 'Gmail / Email',              type: 'email',  required: false },
-  { name: 'edad',    label: 'Edad',                       type: 'number', required: false },
-  { name: 'deporte', label: 'Deporte que practicás',      type: 'text',   required: true },
-  { name: 'anios',   label: 'Hace cuántos años practicás', type: 'text',  required: false },
+  { name: 'nombre',  label: 'Nombre completo',             type: 'text',   required: true },
+  { name: 'celular', label: 'Celular',                     type: 'tel',    required: true },
+  { name: 'email',   label: 'Gmail / Email',               type: 'email',  required: false },
+  { name: 'edad',    label: 'Edad',                        type: 'number', required: false },
+  { name: 'deporte', label: 'Deporte que practicás',       type: 'text',   required: true },
+  { name: 'anios',   label: 'Hace cuántos años practicás', type: 'text',   required: false },
 ]
 
 function WaIcon() {
@@ -64,7 +64,6 @@ export default function ContactForm() {
     <section id="contacto" className="relative bg-dark py-24 px-6 md:px-10 overflow-hidden">
       <div className="absolute inset-0 bg-grid-sm opacity-60 pointer-events-none" />
 
-      {/* Top glow */}
       <div
         className="absolute left-1/2 -translate-x-1/2 top-0 w-[600px] h-[280px] pointer-events-none"
         style={{ background: 'radial-gradient(ellipse, rgba(37,99,235,0.1) 0%, transparent 70%)' }}
@@ -82,16 +81,16 @@ export default function ContactForm() {
           </h2>
         </div>
 
-        {/* Form card */}
-        <div className="border-grad">
-          <div className="bg-card rounded-[9px] p-8 md:p-10">
+        {/* Form card — white */}
+        <div className="rounded-2xl overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.5)]">
+          <div className="bg-white p-8 md:p-10">
             <form onSubmit={submit} noValidate>
 
               {/* 2-col grid fields */}
               <div className="grid sm:grid-cols-2 gap-5 mb-5">
                 {FIELDS.map(({ name, label, type, required }) => (
                   <div key={name}>
-                    <label className="block font-condensed font-semibold text-[0.7rem] tracking-[0.16em] uppercase text-white/65 mb-2">
+                    <label className="block font-condensed font-semibold text-[0.7rem] tracking-[0.16em] uppercase text-gray-600 mb-2">
                       {label}{required && <span className="text-blue ml-1">*</span>}
                     </label>
                     <input
@@ -103,7 +102,7 @@ export default function ContactForm() {
                       className={`${INPUT_BASE} ${errors[name] ? INPUT_ERROR : INPUT_NORMAL}`}
                     />
                     {errors[name] && (
-                      <p className="font-barlow text-[0.75rem] text-red-400 mt-1">{errors[name]}</p>
+                      <p className="font-barlow text-[0.75rem] text-red-500 mt-1">{errors[name]}</p>
                     )}
                   </div>
                 ))}
@@ -111,7 +110,7 @@ export default function ContactForm() {
 
               {/* Lesiones textarea */}
               <div className="mb-5">
-                <label className="block font-condensed font-semibold text-[0.7rem] tracking-[0.16em] uppercase text-white/65 mb-2">
+                <label className="block font-condensed font-semibold text-[0.7rem] tracking-[0.16em] uppercase text-gray-600 mb-2">
                   ¿Tenés alguna lesión?
                 </label>
                 <textarea
@@ -126,7 +125,7 @@ export default function ContactForm() {
 
               {/* Cómo te conocí — select */}
               <div className="mb-8">
-                <label className="block font-condensed font-semibold text-[0.7rem] tracking-[0.16em] uppercase text-white/65 mb-2">
+                <label className="block font-condensed font-semibold text-[0.7rem] tracking-[0.16em] uppercase text-gray-600 mb-2">
                   ¿Cómo fue tu primer contacto conmigo?
                 </label>
                 <select
@@ -134,10 +133,10 @@ export default function ContactForm() {
                   value={form.contacto}
                   onChange={handle}
                   className={`${INPUT_BASE} ${INPUT_NORMAL} cursor-pointer`}
-                  style={{ backgroundColor: '#091830', colorScheme: 'dark' }}
+                  style={{ backgroundColor: '#f9fafb', colorScheme: 'light' }}
                 >
                   {['Instagram', 'Recomendación', 'Google', 'Otro'].map(o => (
-                    <option key={o} value={o} style={{ backgroundColor: '#091830' }}>{o}</option>
+                    <option key={o} value={o}>{o}</option>
                   ))}
                 </select>
               </div>
@@ -154,7 +153,7 @@ export default function ContactForm() {
                 Enviar por WhatsApp
               </button>
 
-              <p className="text-center font-barlow text-[0.75rem] text-white/25 mt-4">
+              <p className="text-center font-barlow text-[0.75rem] text-gray-400 mt-4">
                 * Campos obligatorios — Al enviar se abrirá WhatsApp con tu consulta
               </p>
             </form>
