@@ -59,8 +59,8 @@ export default function CtaBanner() {
           <p className="font-condensed font-semibold text-[1.1rem] tracking-[0.1em] uppercase text-white">
             Seguimiento y coaching ilimitado.
           </p>
-          <p className="font-barlow font-light text-white/55 text-[0.88rem] pt-2">
-            Modalidad presencial Parque de Golf Villa Adelina / ONLINE vía ZOOM
+          <p className="font-condensed font-semibold text-[1.1rem] tracking-[0.1em] uppercase text-white">
+            Online vía ZOOM
           </p>
         </div>
 

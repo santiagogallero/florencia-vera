@@ -32,6 +32,7 @@ const SERVICES = [
     icon: ICONS.strength,
     title: 'FUERZA Y RESISTENCIA',
     desc: 'Esculpí tu cuerpo atlético, mejorá tu velocidad de respuesta y rendí al máximo.',
+    note: 'Online vía ZOOM',
   },
 ]
 
@@ -66,6 +67,12 @@ function ServiceCard({ service, delay }) {
           <p className="font-barlow font-light text-[0.87rem] text-white/65 leading-[1.75] flex-1">
             {service.desc}
           </p>
+
+          {service.note && (
+            <p className="font-condensed font-bold text-[0.78rem] tracking-[0.1em] uppercase text-blue-lt mt-4">
+              {service.note}
+            </p>
+          )}
 
           <a
             href={WA_LINK}
@@ -119,10 +126,6 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Modalidad */}
-        <p className="mt-6 font-condensed text-[0.72rem] tracking-[0.16em] uppercase text-white/30">
-          Presencial — Parque de Golf Villa Adelina &nbsp;/&nbsp; Online vía ZOOM
-        </p>
 
       </div>
     </section>

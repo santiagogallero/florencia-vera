@@ -38,7 +38,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 pt-28 pb-16">
-        <div className="max-w-xl">
+        <div className="max-w-2xl">
 
           {/* Eyebrow */}
           <div className="flex items-start gap-3 mb-5 animate-fade-up" style={{ animationDelay: '0.06s' }}>
@@ -56,7 +56,7 @@ export default function Hero() {
           {/* NUEVO */}
           <div
             className="font-bebas text-blue-shimmer leading-[0.85] animate-fade-up"
-            style={{ fontSize: 'clamp(64px,13vw,156px)', animationDelay: '0.16s' }}
+            style={{ fontSize: 'clamp(64px,15vw,180px)', animationDelay: '0.16s' }}
           >
             NUEVO
           </div>
@@ -64,20 +64,22 @@ export default function Hero() {
           {/* Main title */}
           <h1
             className="font-bebas leading-[0.9] mb-5 animate-fade-up"
-            style={{ fontSize: 'clamp(38px,6vw,78px)', animationDelay: '0.22s' }}
+            style={{ fontSize: 'clamp(42px,7vw,92px)', animationDelay: '0.22s' }}
           >
             PROGRAMA DE RECUPERACIÓN<br />MUSCULAR DEPORTIVA
           </h1>
 
-          {/* EMPEZÁ HOY badge */}
-          <div className="inline-flex items-center gap-2 mb-4 px-5 py-2 rounded-full bg-blue animate-fade-up" style={{ animationDelay: '0.28s', boxShadow: '0 4px 20px rgba(37,99,235,0.55)' }}>
-            <span className="w-1.5 h-1.5 rounded-full bg-white/70" style={{ animation: 'blink 1.8s ease-in-out infinite' }} />
-            <span className="font-condensed font-bold text-[0.7rem] tracking-[0.22em] uppercase text-white">Empezá Hoy</span>
+          {/* EMPEZÁ HOY — sin encuadrado, estilo label */}
+          <div className="flex items-center gap-3 mb-4 animate-fade-up" style={{ animationDelay: '0.28s' }}>
+            <span className="block w-6 h-[2px] bg-blue flex-shrink-0" />
+            <span className="font-condensed font-bold text-[0.72rem] tracking-[0.26em] uppercase text-blue">
+              Empezá Hoy
+            </span>
           </div>
 
           {/* Subtitle */}
           <p
-            className="font-barlow font-light text-white/70 leading-relaxed mb-8 animate-fade-up"
+            className="font-barlow font-light text-white leading-relaxed mb-8 animate-fade-up"
             style={{ fontSize: 'clamp(0.95rem,1.6vw,1.05rem)', animationDelay: '0.32s' }}
           >
             Descargá tensión, recuperá movilidad y aliviá tus hombros para rendir mejor en cada partido.
