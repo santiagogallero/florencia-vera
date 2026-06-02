@@ -37,16 +37,24 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 pt-28 pb-16">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-10 pt-20 md:pt-28 pb-16">
         <div className="max-w-2xl">
 
           {/* Eyebrow */}
-          <div className="flex items-start gap-3 mb-5 animate-fade-up" style={{ animationDelay: '0.06s' }}>
-            <span className="block w-8 h-[2px] bg-blue flex-shrink-0 mt-[0.45em]" />
+          <div className="flex items-start gap-3 mb-3 animate-fade-up" style={{ animationDelay: '0.06s' }}>
+            <span className="block w-8 h-[2px] bg-blue flex-shrink-0 mt-[0.55em]" />
             <span className="font-condensed font-semibold text-[0.65rem] tracking-[0.18em] uppercase text-blue-lt leading-relaxed">
-              Florencia.Vera / Instructora Certificada de Gimnasia Acrobática y Deportiva
+              Instructora Certificada de Gimnasia Acrobática y Deportiva
             </span>
           </div>
+
+          {/* Nombre */}
+          <h2
+            className="font-bebas leading-[0.9] text-white mb-5 animate-fade-up"
+            style={{ fontSize: 'clamp(52px,11vw,130px)', animationDelay: '0.1s' }}
+          >
+            Florencia Vera
+          </h2>
 
           {/* Pre-headline */}
           <p className="font-condensed font-semibold text-[0.9rem] tracking-[0.2em] uppercase text-white/50 animate-fade-up" style={{ animationDelay: '0.12s' }}>
