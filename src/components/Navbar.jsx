@@ -33,12 +33,8 @@ export default function Navbar() {
           ${scrolled ? 'bg-ink/90 backdrop-blur-2xl border-b border-white/[0.05]' : ''}`}
       >
         {/* Logo */}
-        <a href="#inicio" className="font-bebas text-[1.6rem] tracking-[0.1em] leading-none select-none">
-          Florencia
-          <span className="text-blue-grad bg-gradient-to-r from-blue to-blue-lt bg-clip-text text-transparent">
-            .
-          </span>
-          Vera
+        <a href="#inicio" className="select-none">
+          <img src="/logo.jpeg" alt="Florencia Vera FIT" className="h-11 w-11 rounded-full object-cover" />
         </a>
 
         {/* Desktop links */}
